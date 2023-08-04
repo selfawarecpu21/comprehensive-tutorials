@@ -1,14 +1,13 @@
 <template>
-  <section class="hero">
-    <v-img class="hero__image" src="/hero-section-books.jpg">
-      <div class="hero__content">
-        <h1 class="hero__title">Welcome to Comprehensive Tutorials</h1>
-        <p class="hero__subtitle">Learn and grow with our curated tutorials</p>
-        <v-btn color="primary" large @click="navigateTo('tutorials')">Check out some Comprehensive Tutorials</v-btn>
+  <section class="hero hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title spacing">Welcome to Comprehensive Tutorials</h1>
+        <p class="hero-subtitle spacing">Learn and grow while documenting your own curated tutorial for any topic</p>
+        <v-btn class="spacing" color="primary" large @click="navigateTo('tutorials')">Check out some Comprehensive Tutorials</v-btn>
       </div>
-    </v-img>
   </section>
 </template>
+
 
 
 <script>
@@ -21,40 +20,38 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .hero {
   position: relative;
+  height: 60vh; /* Change this to 60% of viewport height */
+  background: url('/hero-section-books.jpg') no-repeat center center;
+  background-size: cover; /* Ensure the image always covers the hero section */
 }
 
-.hero__image {
-  width: 100%;
-  height: box-sizing;
-}
-
-.hero__content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+.hero-content {
+  position: relative; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the content */
   color: white; /* White text color */
-  padding: 2rem 0;
   text-align: center;
+  background: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+  padding: 2rem;
 }
 
-.hero__title {
+.hero-title {
   font-size: 2.5rem;
   font-weight: bold;
 }
 
-.hero__subtitle {
+.hero-subtitle {
   font-size: 1.5rem;
   color: #ddd; /* Light grey text color for the subtitle */
 }
 
+.spacing {
+  margin-bottom: 1em;  /* Adjust as needed */
+}
 </style>
+
+
