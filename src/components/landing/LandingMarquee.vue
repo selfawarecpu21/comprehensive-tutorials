@@ -6,7 +6,7 @@
           v-for="(item, index) in marqueeItems"
           :key="index"
           class="marquee-item"
-          @mouseover="pauseMarquee; randomlyScaleIcon(item.tooltip)"
+          @mouseover="pauseMarquee"
           @mouseout="startMarquee"
         >
           <div class="tooltip" v-if="item.tooltip === bannerText">

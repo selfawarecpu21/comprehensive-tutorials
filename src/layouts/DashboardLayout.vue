@@ -8,7 +8,7 @@
         </v-col>
 
         <v-col cols="9" sm="10" md="10">
-          <DefaultMain />
+          <router-view />
         </v-col>
       </v-row>
     </v-main>
@@ -20,13 +20,11 @@
 <script>
 import DashboardHeader from '@/components/dashboard/DashboardHeader.vue'
 import DashboardSidebar from '@/components/dashboard/DashboardSidebar.vue'
-import DefaultMain from '@/components/global/DefaultMain.vue'
 import DefaultFooter from '@/components/global/DefaultFooter.vue'
 
 export default {
   components: {
         DashboardHeader,
-        DefaultMain,
         DashboardSidebar,
     DefaultFooter,
     
